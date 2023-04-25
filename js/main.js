@@ -172,6 +172,13 @@ var layer4 = document.getElementById('layer4');
 var layer5 = document.getElementById('layer5');
 var layer6 = document.getElementById('layer6');
 
+
+var layer7 = document.getElementById('layer7');
+var layer8 = document.getElementById('layer8');
+var layer9 = document.getElementById('layer9');
+
+var layer10 = document.getElementById('layer10');
+
 var speed1 = 0.02;
 var speed2 = 0.04;
 var speed3 = 0.03;
@@ -197,6 +204,13 @@ window.onload = function() {
       layer5.style.transform = 'translateX(' + (-x * speed2) + 'px) translateY(' + (-y * speed2) + 'px)';
       layer6.style.transform = 'translateX(' + (-x * speed3) + 'px) translateY(' + (-y * speed3) + 'px)';
 
+
+      layer7.style.transform = 'translateX(' + (-y * speed1) + 'px) translateY(' + (-x * speed1) + 'px)';
+      layer8.style.transform = 'translateX(' + (-y * speed2) + 'px) translateY(' + (-x * speed2) + 'px)';
+      layer9.style.transform = 'translateX(' + (-y * speed3) + 'px) translateY(' + (-x * speed3) + 'px)';
+
+      layer10.style.transform = 'translateX(' + (-x * speed3) + 'px) translateY(' + (-y * speed3) + 'px)';
+
       // добавляем плавность к изменениям на каждом слое
       layer1.style.transition = 'transform 0.8s ease-out';
       layer2.style.transition = 'transform 1s ease-out';
@@ -205,6 +219,12 @@ window.onload = function() {
       layer4.style.transition = 'transform 3s ease-out';
       layer5.style.transition = 'transform 2.5s ease-out';
       layer6.style.transition = 'transform 1.8s ease-out';
+
+      layer7.style.transition = 'transform 3s ease-out';
+      layer8.style.transition = 'transform 2.5s ease-out';
+      layer9.style.transition = 'transform 1.8s ease-out';
+
+      layer10.style.transition = 'transform 5s ease-out';
     });
 
     // добавляем обработчик события скролла страницы
@@ -217,6 +237,29 @@ window.onload = function() {
       layer4.style.transform = 'translateX(0px) translateY(0px)';
       layer5.style.transform = 'translateX(0px) translateY(0px)';
       layer6.style.transform = 'translateX(0px) translateY(0px)';
+
+      layer7.style.transform = 'translateX(0px) translateY(0px)';
+      layer8.style.transform = 'translateX(0px) translateY(0px)';
+      layer9.style.transform = 'translateX(0px) translateY(0px)';
+
+      layer10.style.transform = 'translateX(0px) translateY(0px)';
     });
   }, delay);
 };
+
+
+
+const block = document.querySelector('#block');
+
+function handleScroll() {
+  const blockTop = block.getBoundingClientRect().top;
+  const blockBottom = blockTop + block.offsetHeight;
+
+  if (blockTop <= window.innerHeight && blockBottom >= 0) {
+    block.classList.add('visible');
+  } else {
+    block.classList.remove('visible');
+  }
+}
+
+window.addEventListener('scroll', handleScroll);

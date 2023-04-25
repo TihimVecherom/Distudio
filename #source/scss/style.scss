@@ -1,0 +1,723 @@
+// <ПОДКЛЮЧЕНИЕ MIXIN>------------------------------------------------------
+@import "mixin.scss";
+// <ПОДКЛЮЧЕНИЕ MIXIN>------------------------------------------------------
+
+// <ШРИФТЫ>-----------------------------------------------------------------
+
+// <подключаем шрифты>------------------------------------------------------
+@import "fonts.scss";
+// </подключаем шрифты>-----------------------------------------------------
+
+// <шрифт по умолчанию>-----------------------------------------------------
+$font-family: "MuseoSansCyrl", sans-serif;
+// </шрифт по умолчанию>----------------------------------------------------
+
+// </ШРИФТЫ>----------------------------------------------------------------
+
+
+
+
+
+// <ПЕРЕМЕННЫЕ>-------------------------------------------------------------
+$max-width: 1240;
+$min-width: 320;
+$body-font-size: 14;
+$padd-container: 20;
+// </ПЕРЕМЕННЫЕ>------------------------------------------------------------
+
+// <ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>---------------------------------------------
+@import "resize-style.scss";
+// </ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>---------------------------------------------
+
+// <BODY>--------------------------------------------------------------------
+body {
+    line-height: 1.25;
+    font-size: $body-font-size + px;
+    font-family: $font-family;
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+// </BODY>--------------------------------------------------------------------
+
+// <ОБОЛОЧКА>----------------------------------------------------------------
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1 0 auto;
+    overflow: hidden;
+}
+
+// </ОБОЛОЧКА>---------------------------------------------------------------
+
+// <КОНТЕЙНЕР>---------------------------------------------------------------
+.container {
+    max-width: $max-width + px;
+    margin: 0 auto;
+    padding: 0 $padd-container + px;
+}
+
+// </КОНТЕЙНЕР>--------------------------------------------------------------
+
+// <ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>---------------------------
+@import "class.scss";
+// </ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>--------------------------
+
+// <ШАПКА>-------------------------------------------------------------------
+@import "header.scss";
+// </ШАПКА>------------------------------------------------------------------
+
+// <ОСНОВНОЙ БЛОК>-----------------------------------------------------------
+
+input,
+textarea {
+    &.error {
+        border-color: red;
+    }
+}
+
+.main {
+    &-title {
+        font-size: 60px;
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 0.8;
+        text-align: center;
+    }
+    &-subtitle {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 2.333;
+        text-align: center;
+    }
+    &-title-type-2 {
+        font-size: 23px;
+        font-weight: 300;
+        text-transform: uppercase;
+        line-height: 1;
+        text-align: center;
+    }
+    &-subtitle {
+        font-size: 16px;
+        font-weight: 100;
+        line-height: 1.688;
+        text-align: center;
+    }
+
+    &-link {
+        color: rgb(52, 52, 52);
+        position: relative;
+        transition: 0.4s;
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            width: 100%;
+            background: rgb(52, 52, 52);
+        }
+        &:hover {
+            color: #6e85ae;
+            &:before {
+                background: #6e85ae;
+            }
+        }
+    }
+}
+
+.service {
+    padding-bottom: 150px;
+    &-title {
+        padding-bottom: 15px;
+    }
+    &-subtitle {
+        padding-bottom: 50px;
+    }
+    &-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        overflow-x: hidden;
+    }
+    &__item {
+        padding-top: 55px;
+        flex: 0 0 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        &:not(:last-child) {
+            border-right: 1px dashed #dfdfdf;
+        }
+        &-title {
+            padding-top: 90px;
+            font-size: 16px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+}
+
+.section-blog {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.js-select-main {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.icons-arrow {
+    fill: #000;
+    width: 18px;
+    height: 18px;
+    transition: 0.3s;
+    &.active {
+        fill: #6e85ae;
+        transform: rotate(-90deg);
+    }
+}
+
+.submenu {
+    display: none;
+    background: #f7f7f7;
+    position: relative;
+    padding: 29px 29px 35px 40px;
+    margin: 0 -15px;
+    &.active {
+        display: block;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgb(0, 120, 255);
+        width: 6px;
+        height: 100%;
+    }
+    p {
+        font-size: 16px;
+        font-weight: 300;
+        color: rgb(0, 0, 0);
+        line-height: 1.375;
+    }
+}
+
+.design {
+    display: flex;
+    padding-bottom: 150px;
+    overflow-x: hidden;
+    position: relative;
+    &__right {
+        margin-top: 50px;
+        flex: 0 0 60%;
+    }
+    &__left {
+        margin-right: 30px;
+        flex: 0 0 40%;
+    }
+    &-subtitle {
+        padding-bottom: 40px;
+    }
+    p {
+        font-size: 16px;
+        font-weight: 100;
+        color: rgb(126, 126, 126);
+        line-height: 1.5;
+        max-width: 330px;
+        padding-bottom: 30px;
+        background: #ffffff;
+    }
+}
+
+.blog {
+    padding-bottom: 40px;
+    &-title-bottom {
+        padding-bottom: 24px;
+    }
+    &-subtitle-bottom {
+        padding-bottom: 55px;
+    }
+    &__wrapper-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 calc(50% - 15px);
+        &:first-child {
+            margin-right: 30px;
+        }
+        li {
+            padding: 0 15px;
+            border-bottom: 1px solid rgb(209, 209, 209);
+            position: relative;
+        }
+    }
+    &__link {
+        display: block;
+        padding: 10px 0 10px 0;
+        font-size: 16px;
+        font-weight: 300;
+        color: rgb(0, 0, 0);
+        line-height: 2.5;
+        transition: 0.4s;
+        width: 100%;
+        &:hover {
+            color: #6e85ae;
+            .icons-arrow {
+                fill: #6e85ae;
+            }
+        }
+    }
+}
+
+.text-start {
+    text-align: start;
+}
+
+.show-detail {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 2.392;
+    font-weight: 900;
+    display: block;
+
+    background-color: rgb(0, 120, 255);
+    padding: 3px 0;
+    text-align: center;
+    max-width: 255px;
+    border-radius: 30px;
+    transition: 0.4s;
+    box-shadow: 0px 21px 8px -10px rgba(102, 165, 214, 0.31);
+    &:hover {
+        transform: translateY(-10px);
+    }
+}
+
+.port-test {
+    display: flex;
+    justify-content: center;
+}
+.portfolio {
+    position: relative;
+    padding-bottom: 70px;
+    &-wrapper {
+        display: flex;
+        overflow: hidden;
+    }
+
+    &__item {
+        width: calc(100% / 3);
+        background: #fff;
+        transition: all 0.5s ease-in-out;
+
+        &:nth-child(2) {
+            margin: 0 -1px;
+        }
+
+        &:last-child {
+            z-index: 3;
+            &:hover {
+                .img__item {
+                    max-width: 360px;
+                    img {
+                        object-position: center;
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+
+        &:hover:not(:last-child) {
+            width: calc(100% * 2 / 3) !important;
+            .img__item {
+                max-width: 360px;
+                img {
+                    object-position: center;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    &-title {
+        font-size: 16px;
+        font-weight: 300;
+        max-width: 303px;
+        span {
+            color: rgb(52, 52, 52);
+            font-weight: 900;
+        }
+    }
+    &-sub-bottom {
+        padding-bottom: 15px;
+    }
+    &-pad {
+        padding-top: 30px;
+        padding-bottom: 25px;
+    }
+    &__link {
+        margin-right: 35px;
+        position: relative;
+        transition: 0.4s;
+        &:before {
+            content: "";
+            position: absolute;
+            transition: 0.4s;
+            background: rgb(0, 118, 251);
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+        }
+    }
+    &-span {
+        background: #d7d7d7;
+        height: 1px;
+        width: 20px;
+        position: relative;
+        transition: 0.4s;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -50%;
+            height: 1px;
+            width: 14px;
+            background: #d7d7d7;
+        }
+        &:before {
+            top: -5px;
+            transform: translate(-50%) rotate(45deg);
+        }
+        &:after {
+            top: 5px;
+            transform: translate(-50%) rotate(-45deg);
+        }
+    }
+
+    .item {
+        height: 100%;
+    }
+
+    .item-box {
+        overflow: hidden;
+        padding: 30px 0 30px 30px;
+        border: 1px solid #d7d7d7;
+        min-width: 360px;
+        height: 100%;
+    }
+}
+
+.img__item {
+    flex: 1 1 100%;
+    height: 303px;
+    transition: 0.5s ease-in-out;
+    margin: 0 0 30px 0;
+    max-width: 340px;
+    a {
+        display: flex;
+        justify-content: flex-end;
+        flex: 1 1 100%;
+    }
+    img {
+        object-position: right -110px bottom 0px;
+        transition: 0.3s ease-in-out;
+        max-height: 100%;
+        margin-left: auto;
+    }
+}
+
+.text-abs-port {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+    color: rgba(52, 52, 52, 0.102);
+    font-size: 126px;
+    font-weight: 900;
+    transform: rotate(0deg) translate(calc(-100% - 70px), 0);
+    transition: 0.4s;
+}
+
+.port-block {
+    display: flex;
+}
+.wrapper-portfolio__link {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: rgb(0, 118, 251);
+    font-weight: 300;
+    &:hover {
+        .portfolio-span {
+            width: 50px;
+            &:before {
+                right: -20%;
+            }
+            &:after {
+                right: -20%;
+            }
+        }
+        .portfolio__link {
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.section-service,
+.section-design,
+.section-portfolio {
+    position: relative;
+}
+.square {
+    position: absolute;
+    background-color: rgb(0, 120, 255);
+    border-radius: 5px;
+    z-index: -1;
+    &-0 {
+        left: 120px;
+        bottom: 250px;
+    }
+    &-1 {
+        left: 40px;
+        bottom: 110px;
+    }
+    &-2 {
+        left: 110px;
+        bottom: 40px;
+    }
+    &-3 {
+        left: 0px;
+        bottom: 0px;
+    }
+    &-4 {
+        left: 20px;
+        top: -30px;
+    }
+    &-5 {
+        left: 80px;
+        top: 85px;
+    }
+    &-6 {
+        left: 60px;
+        top: 110px;
+    }
+    &-7 {
+        left: 20px;
+        top: 270px;
+    }
+    &-8 {
+        left: 0px;
+        top: 310px;
+    }
+    &-9 {
+        right: 80px;
+        top: 50px;
+    }
+    &-10 {
+        right: 0px;
+        top: 155px;
+    }
+    &-11 {
+        right: 55px;
+        top: 275px;
+    }
+    &-12 {
+        left: 95px;
+        top: 225px;
+    }
+    &-13 {
+        left: 120px;
+        top: 250px;
+    }
+    &-14 {
+        left: 0px;
+        top: 360px;
+    }
+    &-15 {
+        left: 240px;
+        top: 380px;
+    }
+    &-16 {
+        right: 260px;
+        top: -10px;
+    }
+    &-17 {
+        right: 115px;
+        top: 15px;
+    }
+    &-18 {
+        right: 0px;
+        top: 40px;
+    }
+    &-19 {
+        right: 0px;
+        top: 55px;
+    }
+    &-20 {
+        right: 195px;
+        top: 130px;
+    }
+    &-21 {
+        right: 10px;
+        top: 160px;
+    }
+    &-22 {
+        right: 0px;
+        top: 280px;
+    }
+    &-23 {
+        right: 210px;
+        top: 385px;
+    }
+    &-24 {
+        left: 100px;
+        top: -30px;
+    }
+    &-25 {
+        left: 60px;
+        top: 10px;
+    }
+    &-26 {
+        left: 0px;
+        top: 120px;
+    }
+    &-27 {
+        right: -60px;
+        top: 45px;
+    }
+    &-28 {
+        right: -40px;
+        top: 75px;
+    }
+    &-29 {
+        right: 225px;
+        top: 210px;
+    }
+    &-30 {
+        right: 320px;
+        top: 325px;
+    }
+    &-31 {
+        right: 110px;
+        bottom: 50px;
+    }
+    &-32 {
+        right: 135px;
+        bottom: 30px;
+    }
+    &-33 {
+        left: 300px;
+        top: 65px;
+    }
+    &-34 {
+        left: 370px;
+        top: 210px;
+    }
+    &-35 {
+        left: 260px;
+        bottom: 170px;
+    }
+    &-36 {
+        left: 245px;
+        bottom: 150px;
+    }
+    &-37 {
+        left: 0px;
+        bottom: 40px;
+    }
+    &-38 {
+        left: 40px;
+        bottom: 20px;
+    }
+    &-39 {
+        right: 0px;
+        top: 35px;
+    }
+    &-40 {
+        right: 260px;
+        top: 60px;
+    }
+    &-41 {
+        right: 110px;
+        bottom: 160px;
+    }
+    &-42 {
+        right: 80px;
+        bottom: 140px;
+    }
+    &-43 {
+        right: 0px;
+        bottom: 20px;
+    }
+
+    &-type-0 {
+        width: 32px;
+        height: 32px;
+    }
+    &-type-1 {
+        width: 44px;
+        height: 44px;
+    }
+    &-type-2 {
+        width: 57px;
+        height: 57px;
+    }
+    &-type-3 {
+        width: 64px;
+        height: 64px;
+    }
+    &-type-4 {
+        width: 88px;
+        height: 88px;
+    }
+    &-type-5 {
+        width: 99px;
+        height: 99px;
+    }
+    &-color-2 {
+        background-color: rgba(0, 120, 255, 0.102);
+    }
+    &-color-3 {
+        background-color: rgba(0, 120, 255, 0.2);
+    }
+    &-color-4 {
+        background: #ffffff;
+        z-index: 1;
+    }
+}
+
+// </ОСНОВНОЙ БЛОК>----------------------------------------------------------
+
+// <404>---------------------------------------------------------------------
+//===========================================================================
+// </404>--------------------------------------------------------------------
+
+// <ПОДВАЛ>------------------------------------------------------------------
+@import "footer.scss";
+// </ПОДВАЛ>-----------------------------------------------------------------
+
+// <ПОПАП>-------------------------------------------------------------------
+@import "popup.scss";
+// </ПОПАП>------------------------------------------------------------------
+
+// <ПОДКЛЮЧЕНИЕ МЕДИАЗАПРОСОВ>-----------------------------------------------
+@import "media.scss";
+// </ПОДКЛЮЧЕНИЕ МЕДИАЗАПРОСОВ>----------------------------------------------

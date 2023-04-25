@@ -1,0 +1,306 @@
+// <МЕДИАЗАПРОСЫ>-----------------------------------------------
+@media (max-width: 1900px) {
+    .square { 
+        &-34 {
+            left: 100px;
+        }
+    }
+}
+@media (max-width: 1600px) {
+    .square { 
+        &-33 {
+            left: 10px;
+            top: 65px;
+        }
+        &-34 {
+            width: 0;
+            height: 0;
+        }
+        &-35 {
+            left: 60px;
+            bottom: 170px;
+        }
+        &-36 {
+            left: 45px;
+            bottom: 150px;
+        }
+    } 
+}
+
+@media (max-width: 1200px) {
+    .design__right {
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    /**/
+}
+
+@media (max-width: 992px) {
+    .blog, .portfolio, .design, .service  {
+        background: #ffffff;
+    }
+    .blog__wrapper-list {
+        flex-direction: column;
+    }
+    .blog__list:first-child {
+        margin-right: 0px;
+    }
+    .service__item {
+        flex: 0 0 50%;
+        &:last-child {
+            border-right: 1px dashed #dfdfdf;
+        }
+    }
+    .design {
+        flex-direction: column;
+        padding-bottom: 50px;
+        p {
+            max-width: 100%;
+        }
+        .show-detail {
+            min-width: 255px;
+        }
+        &__left {
+            margin-right: 0px;
+            flex: 0 0 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__right {
+            margin-top: 30px;
+            flex: 0 0 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .portfolio {
+        padding-bottom: 50px;
+    }
+    .blog-subtitle-bottom {
+        padding-bottom: 5px;
+    }
+    .portfolio-wrapper {
+        flex-direction: column;
+    }
+    .portfolio__item {
+        width: 100%!important;
+        padding: 10px;
+        &:last-child {
+            position: static;
+        }
+        .img__item img {
+            object-position: center;
+        }
+        &:hover {
+            width: 100%!important;
+            & + .portfolio__item {
+                display: block;
+            }
+        }
+    }
+    .img__item {
+        height: auto;
+        animation: none;
+    }
+
+    .portfolio__item:hover:not(:last-child) {
+        width: 100%!important;
+    }
+    
+    .portfolio .item-box {
+        padding: 20px;
+        min-width: auto;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .info {
+        &-title {
+            font-size: 20px;
+            padding-bottom: 10px;
+        }  
+    }
+    .footer__link  {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    .icons-tel {
+        width: 20px!important;
+        height: 20px!important;
+    }
+    .header__list {
+        margin-bottom: 20px;
+    }
+    .header__info {
+        max-width: 300px;
+        p {
+            padding-bottom: 10px;
+        }
+    }
+    .header {
+        &__menu {
+            padding: 60px 0px 10px 0px;
+        }
+    }
+    .square { 
+        background: none;
+        &-1 {
+            left: 10px;
+            bottom: 110px;
+        }
+        &-2 {
+            left: 30px;
+            bottom: 40px;
+        }
+    }
+    
+    .header-arrow {
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .submenu {
+        padding: 5px 5px 5px 11px;
+        margin: 0;
+    }
+    .pc {
+        display: none;
+    }
+    .main-title {
+        font-size: 30px;
+    }
+    .footer-bg {
+        padding: 20px 0;
+    }
+    .footer-top {
+        flex-direction: column;
+    }
+    .footer-top__item {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+        &:first-child::before {
+            top: auto;
+            bottom: -15px;
+            width: 100%;
+            height: 1px;
+        }
+        &:last-child::before {
+            top: -15px;
+            width: 100%;
+            height: 1px;
+        }
+    }
+
+    .design .show-detail {
+        min-width: 200px;
+        padding: 0;
+    }
+    .service__item {
+        flex: 0 0 100%;
+        &:not(:last-child) {
+            border-right: none;
+        }
+        &:last-child {
+            border-right: none;
+        }
+    }
+    .blog__list{
+        flex: 0 0 100%;
+    } 
+    .blog__list li {
+        padding: 5px 0;
+    }
+    .blog__link {
+        line-height: 1.25;
+        padding: 5px 30px 5px 0;
+    }
+    .js-select-main {
+        right: 0px;
+        top: 10px;
+    }
+    .container {
+        padding: 0 10px;
+    }
+    .header-message {
+        bottom: 10px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+    }
+    .icons-message {
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .ml-text {
+        margin-left: 0;
+    }
+    .service {
+        padding-bottom: 50px;
+    }
+    .service__item-title {
+        padding-top: 30px;
+    }
+    .service__item {
+        padding-top: 30px;
+    }
+    .service-subtitle {
+        padding-bottom: 10px;
+    }
+    .header {
+        padding: 20px 0 160px 0;
+        margin-bottom: 50px;
+    }
+    .header-bottom {
+        padding-top: 125px;
+    }
+    .header-arrow-bottom {
+        width: 50px;
+        height: 50px;
+    }
+    .header__link {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .header__menu-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-top__item {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-popup {
+        min-width: 255px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        
+        align-items: center;
+    }
+    .social {
+        padding-bottom: 10px;
+        order: 1;
+    }
+    .copyright {
+        line-height: 1.25;
+        order: 2;
+        text-align: center;
+    }
+}
+
+@media (max-width: 360px) {
+    /**/
+}
+// </МЕДИАЗАПРОСЫ>----------------------------------------------

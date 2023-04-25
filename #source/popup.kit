@@ -1,0 +1,38 @@
+ <!-- попап -->
+    <div class="popup js-popup" data-id-popup="popup-0">
+        <div class="popup__opas"></div>
+        <div class="popup__wrapp js-popup__wrapp">
+            <span class="popup__close js-popup__close"></span>
+            <div class="popup-container">
+                <h2 class="popup__title">Перезвоним Вам в ближайшее время!</h2>
+                <form action="">
+                    <label class="requirements__label">Ваше имя: </label>
+                    <input type="text" class="popup__input requirements__input" placeholder="Ваше имя" required>
+                    <label class="requirements__label">Телефон: </label>
+                    <input type="tel" onkeyup="this.value = this.value.replace(/[^\d+]/g,'');" class="popup__input requirements__input" placeholder="Телефон" required>
+                    <label class="requirements__label">Сообщение: </label>
+                    <textarea class="popup__input requirements__input popup__textarea" placeholder="Сообщение"></textarea>
+                    <button class="requirements-btn">Жду звонка!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup js-popup" data-id-popup="popup-1">
+        <div class="popup__opas"></div>
+        <div class="popup__wrapp js-popup__wrapp">
+            <span class="popup__close js-popup__close"></span>
+            <div class="popup-container">
+                <h2 class="popup__title">Отправить сообщение</h2>
+                <form action="">
+                    <label class="requirements__label">Ваше имя: </label>
+                    <input type="text" class="popup__input requirements__input" placeholder="Ваше имя" required>
+                    <label class="requirements__label">Email: </label>
+                    <input type="email" class="popup__input requirements__input" placeholder="Email" required>
+                    <label class="requirements__label">Сообщение: </label>
+                    <textarea class="popup__input requirements__input popup__textarea" placeholder="Сообщение"></textarea>
+                    <button class="requirements-btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>

@@ -263,3 +263,26 @@ function handleScroll() {
 }
 
 window.addEventListener('scroll', handleScroll);
+
+
+
+const btnopenpopup = document.getElementById('headerBtn')
+btnopenpopup.addEventListener('click', opecnPopup)
+
+
+async function opecnPopup() {
+
+    const { value: formValues } = await Swal.fire({
+        title: 'Укажите свои данные',
+        html: '<input id="swal-input1" class="swal2-input">' +
+            '<input id="swal-input2" class="swal2-input">',
+        focusConfirm: false,
+        preConfirm: () => {
+            return [
+                document.getElementById('swal-input1').value,
+                document.getElementById('swal-input2').value
+            ]
+        }
+    });
+
+}

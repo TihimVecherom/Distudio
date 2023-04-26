@@ -1317,17 +1317,26 @@ padding: 15px;
 
 
 
+.swal2-input, .swal2-file, .swal2-textareaХ{
+  width: calc(100% - 10px)  !important;
+}
+
+
+
+.swal2-input, .swal2-file, .swal2-textarea, .swal2-select, .swal2-radio, .swal2-checkbox{
+  margin: 0 !important;
+  margin: 5px !important;
+}
 
 
 
 
-
-
-
-
-
-
-
+.swal2-styled.swal2-confirm{
+  background: #3376F6 !important;
+}
+.swal2-styled{
+  padding: 0.625em 3em !important;
+}
 
 .header__big-logo {
   max-width: 465px;

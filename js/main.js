@@ -253,7 +253,7 @@ const block = document.querySelector('#block');
 
 function handleScroll() {
   const blockTop = block.getBoundingClientRect().top;
-  const blockBottom = blockTop + block.offsetHeight;
+  const blockBottom = blockTop + block.offsetHeight ;
 
   if (blockTop <= window.innerHeight && blockBottom >= 0) {
     block.classList.add('visible');
